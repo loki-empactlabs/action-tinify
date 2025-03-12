@@ -2,13 +2,7 @@ import {Context} from '@actions/github/lib/context'
 import {Commit, supportedEvents} from './types'
 
 export function getCommitMessage(commit: Commit): string {
-  let message = commit.message
-
-  if (message) {
-    return message
-  }
-
-  message = 'Compress image'
+  let message = 'Compress image'
 
   if (commit.files.length > 1) {
     message += 's'

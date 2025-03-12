@@ -17,15 +17,6 @@ inputs:
     description: 'Git user.email'
     required: false
     default: ${{ github.actor }}@users.noreply.github.com
-  commit_message:
-    description: 'Custom commit message'
-    required: false
-  resize_width:
-    description: 'Maximum target image width'
-    required: false
-  resize_height:
-    description: 'Maximum target image height'
-    required: false
 runs:
   using: 'docker'
   image: 'docker://loki2empactlabs/github-action-tinify:master'

@@ -23,14 +23,9 @@ async function run(): Promise<void> {
 
     startGroup('Compressing images')
     const compressedImages = []
-    const resizeWidth = Number(getInput('resize_width')) || undefined
-    const resizeHeight = Number(getInput('resize_height')) || undefined
 
     for (const image of images) {
-      const compressed = await image.compress({
-        resizeWidth,
-        resizeHeight
-      })
+      const compressed = await image.compress()
 
       if (compressed) {
         compressedImages.push(image)
@@ -43,8 +38,7 @@ async function run(): Promise<void> {
       await git.commit({
         files: compressedImages,
         userName: getInput('commit_user_name'),
-        userEmail: getInput('commit_user_email'),
-        message: getInput('commit_message')
+        userEmail: getInput('commit_user_email')
       })
       endGroup()
     }

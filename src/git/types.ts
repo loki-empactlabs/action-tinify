@@ -42,5 +42,4 @@ export interface Commit {
   files: Image[]
   userName: string
   userEmail: string
-  message: string
 }
