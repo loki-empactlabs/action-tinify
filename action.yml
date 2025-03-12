@@ -1,4 +1,4 @@
-name: 'Tinify Image Action'
+name: 'Tinify Image Action (Fork Version)'
 description: 'Compress and resize images with the Tinify API'
 author: 'loki-empactlabs'
 inputs:
