@@ -19,7 +19,7 @@ inputs:
     default: ${{ github.actor }}@users.noreply.github.com
 runs:
   using: 'docker'
-  image: 'docker://loki2empactlabs/github-action-tinify:master'
+  image: 'docker://loki2empactlabs/github-action-tinify:latest'
 branding:
   icon: 'image'
   color: 'green'
