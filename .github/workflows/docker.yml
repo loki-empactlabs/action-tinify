@@ -17,4 +17,5 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v4
         with:
-          tags: latest
+          push: true
+          tags: loki2empactlabs/github-action-tinify:latest
