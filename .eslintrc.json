@@ -1,6 +1,6 @@
 {
   "root": true,
-  "plugins": ["jest", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "plugin:github/recommended",
     "plugin:github/typescript",
@@ -45,8 +45,7 @@
   },
   "env": {
     "node": true,
-    "es6": true,
-    "jest/globals": true
+    "es6": true
   },
   "settings": {
     "import/resolver": {
