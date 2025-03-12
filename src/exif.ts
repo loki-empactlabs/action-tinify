@@ -30,7 +30,7 @@ export default class Exif {
     return output
   }
 
-  async set(inputs: [Tag, string][]): Promise<boolean> {
+  async set(inputs: Array<[Tag, string]>): Promise<boolean> {
     return Boolean(
       await exec(Exif.COMMAND, [
         ...inputs.map(input => `-${input[0]}=${input[1]}`),

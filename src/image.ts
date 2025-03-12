@@ -1,7 +1,7 @@
 import {debug, info} from '@actions/core'
 import {statSync} from 'fs'
 import tinify from 'tinify'
-import bytes from 'bytes'
+import {format} from 'bytes'
 import {imageSize} from 'image-size'
 import {promisify} from 'util'
 import {
@@ -77,6 +77,6 @@ export default class Image {
 
     this.sizes.push(size)
 
-    debug(`[${this.filename}] ${bytes.format(size)}`)
+    debug(`[${this.filename}] ${format(size)}`)
   }
 }

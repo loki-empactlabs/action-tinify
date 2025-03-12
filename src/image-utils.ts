@@ -1,6 +1,6 @@
 import {Compress} from './image'
 import {ISizeCalculationResult} from 'image-size/dist/types/interface'
-import bytes from 'bytes'
+import {format} from 'bytes'
 
 /**
  * @see https://tinypng.com/developers/reference/nodejs#resizing-images
@@ -16,7 +16,7 @@ export function getCompressionSummary(sizes: number[]): string {
   const before = sizes[0]
   const after = sizes[1]
 
-  return `${bytes.format(after - before)} (-${Math.floor(
+  return `${format(after - before)} (-${Math.floor(
     100 * (1 - after / before)
   )}%)`
 }
