@@ -30,12 +30,7 @@ export default class Git {
           const ref = commit.id
 
           info(`[${this.context.eventName}] Fetching files for commit ${ref}`)
-          filesPromises.push(
-            this.getCommitFiles({
-              ...this.context.repo,
-              ref
-            })
-          )
+          filesPromises.push(this.getCommitFiles({...this.context.repo, ref}))
         }
         break
       case 'pull_request':
@@ -46,10 +41,7 @@ export default class Git {
         filesPromises.push(
           this.octokit.paginate(
             'GET /repos/{owner}/{repo}/pulls/{pull_number}/files',
-            {
-              ...this.context.repo,
-              pull_number: this.context.payload.number
-            }
+            {...this.context.repo, pull_number: this.context.payload.number}
           )
         )
         break
