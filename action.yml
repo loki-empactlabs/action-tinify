@@ -28,7 +28,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker://loki2empactlabs/github-action-tinify:latest'
+  image: 'docker://loki2empactlabs/github-action-tinify:master'
 branding:
   icon: 'image'
   color: 'green'
