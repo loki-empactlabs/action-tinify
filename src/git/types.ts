@@ -40,6 +40,4 @@ export interface File {
 
 export interface Commit {
   files: Image[]
-  userName: string
-  userEmail: string
 }

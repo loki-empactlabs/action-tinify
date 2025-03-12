@@ -9,14 +9,6 @@ inputs:
     description: 'Repository GITHUB_TOKEN or personal access token secret'
     required: false
     default: ${{ github.token }}
-  commit_user_name:
-    description: 'Git user.name'
-    required: false
-    default: ${{ github.actor }}
-  commit_user_email:
-    description: 'Git user.email'
-    required: false
-    default: ${{ github.actor }}@users.noreply.github.com
 runs:
   using: 'docker'
   image: 'docker://loki2empactlabs/github-action-tinify:latest'

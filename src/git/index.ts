@@ -87,10 +87,6 @@ export default class Git {
       ...commit.files.map(image => image.getFilename())
     ])
 
-    info('Configuring git')
-    await exec('git', ['config', 'user.name', commit.userName])
-    await exec('git', ['config', 'user.email', commit.userEmail])
-
     info('Create commit')
     await exec('git', [
       'commit',

@@ -66,5 +66,3 @@ If you are sure that you want the compression commit to trigger a workflow run, 
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`api_key`**       | Required Tinify API key (create one [here](https://tinypng.com/developers))                                                                                                |
 | `github_token`      | Repository `GITHUB_TOKEN` or personal access token secret; defaults to [`github.token`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) |
-| `commit_user_name`  | Git user.name, defaults to `github.actor`                                                                                                                                  |
-| `commit_user_email` | Git user.email, defaults to `<github.actor>@users.noreply.github.com`                                                                                                      |

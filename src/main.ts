@@ -35,11 +35,7 @@ async function run(): Promise<void> {
 
     if (compressedImages.length) {
       startGroup('Committing changes')
-      await git.commit({
-        files: compressedImages,
-        userName: getInput('commit_user_name'),
-        userEmail: getInput('commit_user_email')
-      })
+      await git.commit({files: compressedImages})
       endGroup()
     }
   } catch (error) {
