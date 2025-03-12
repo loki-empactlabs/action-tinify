@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: namoscato/github-action-tinify
+          images: loki2empactlabs/github-action-tinify
           tags: |
             type=ref,event=branch
             type=ref,event=pr

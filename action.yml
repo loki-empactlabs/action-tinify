@@ -1,6 +1,6 @@
 name: 'Tinify Image Action'
 description: 'Compress and resize images with the Tinify API'
-author: 'namoscato'
+author: 'loki-empactlabs'
 inputs:
   api_key:
     description: 'Tinify API key'
@@ -28,7 +28,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker://namoscato/github-action-tinify:v1'
+  image: 'docker://loki2empactlabs/github-action-tinify:latest'
 branding:
   icon: 'image'
   color: 'green'

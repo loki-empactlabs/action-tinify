@@ -4,7 +4,7 @@ import {getType} from 'mime'
 import Image from './image'
 
 /** @see https://tinypng.com/developers/reference#compressing-images */
-const SUPPORTED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp']
+const SUPPORTED_MIME_TYPES = ['image/jpeg', 'image/png']
 
 export default class Images implements Iterable<Image> {
   private readonly filenames = new Set<string>()

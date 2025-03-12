@@ -1,4 +1,4 @@
-FROM node:18 AS builder
+FROM node:22 AS builder
 WORKDIR /usr/app
 
 COPY package*.json ./
@@ -9,8 +9,8 @@ COPY src ./src
 
 RUN npm run build
 
-FROM node:18
-ENV EXIFTOOL_VERSION 12.60
+FROM node:22
+ENV EXIFTOOL_VERSION 13.25
 
 # Install exiftool: https://exiftool.org/install.html#Unix
 RUN wget -O exiftool.tar.gz "https://exiftool.org/Image-ExifTool-${EXIFTOOL_VERSION}.tar.gz" && \
