@@ -1,15 +1,12 @@
+# Tinify Image Action (Fork Version)
+
 [![docker](https://img.shields.io/docker/v/loki2empactlabs/github-action-tinify?label=docker)](https://hub.docker.com/r/loki2empactlabs/github-action-tinify)
 
-# Tinify Image Action
-
-[GitHub Action](https://github.com/features/actions) to compress and resize images with the [Tinify API](https://tinypng.com/developers).
-
-![Example commit](https://i.imgur.com/FWOosON.png)
+[GitHub Action](https://github.com/features/actions) to compress images with the [Tinify API](https://tinypng.com/developers).
 
 ## Features
 
-- filters PNG, JPEG, and WebP files in a commit or pull request
-- optionally scales images proportionally
+- filters PNG and JPEG files in a commit or pull request
 - sets Exif metadata to prevent duplicate compressions
 - pushes commit with compression metrics
 
@@ -44,7 +41,7 @@ The following [webhook events](https://docs.github.com/en/actions/reference/even
 - `pull_request`
 - `push`
 
-> [!IMPORTANT]  
+> [ IMPORTANT ]  
 > In pull request contexts, [`actions/checkout`](https://github.com/actions/checkout) checkouts a _merge_ commit by default. You must checkout the pull request _HEAD_ commit by overriding the `ref` input as illustrated above and as noted in [their documentation](https://github.com/actions/checkout#Checkout-pull-request-HEAD-commit-instead-of-merge-commit).
 
 ### Commit Behavior
@@ -66,3 +63,5 @@ If you are sure that you want the compression commit to trigger a workflow run, 
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`api_key`**       | Required Tinify API key (create one [here](https://tinypng.com/developers))                                                                                                |
 | `github_token`      | Repository `GITHUB_TOKEN` or personal access token secret; defaults to [`github.token`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) |
+| `commit_user_name`  | Git user.name, defaults to `github.actor`                                                                                                                                  |
+| `commit_user_email` | Git user.email, defaults to `<github.actor>@users.noreply.github.com`                                                                                                      |
